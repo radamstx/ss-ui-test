@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'ss/ui/test/webdriver/wait_condition'
 require 'ss/ui/test/views/asset_exchange_view'
 require 'ss/ui/test/views/asset_select_view'
 require 'ss/ui/test/views/order_details_view'
@@ -9,8 +8,8 @@ class AssetExchangeController
   include WaitCondition
 
   def initialize
-    @view = AssetExchangeView.new
-    @asset_select_view = AssetSelectView.new
+    @view               = AssetExchangeView.new
+    @asset_select_view  = AssetSelectView.new
     @order_details_view = OrderDetailsView.new
   end
 
@@ -61,8 +60,9 @@ class AssetExchangeController
   end
 
   def prefilled_addresses_valid?(deposit_currency, receive_currency)
-    dest_placeholder = @order_details_view.destination_address.attribute('placeholder')
+    dest_placeholder   = @order_details_view.destination_address.attribute('placeholder')
     refund_placeholder = @order_details_view.refund_address.attribute('placeholder')
+
     dest_placeholder == "Your #{receive_currency} Address (destination address)" &&
       refund_placeholder == "Your #{deposit_currency} Refund Address"
   end

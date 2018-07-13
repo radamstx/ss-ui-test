@@ -16,8 +16,8 @@ class AssetExchangeView
     @current_deposit = BaseElement.new(:css, '.coin-selection .input-coin .selected-coin .notranslate')
     @current_receive = BaseElement.new(:css, '.coin-selection .output-coin .selected-coin .notranslate')
 
-    @quick_button = Button.new(:css, 'button[ng-click="type(1)"]')
-    @precise_button = Button.new(:css, 'button[ng-click="type(2)"]')
+    @quick_button    = Button.new(:css, 'button[ng-click="type(1)"]')
+    @precise_button  = Button.new(:css, 'button[ng-click="type(2)"]')
     @continue_button = Button.new(:css, 'a.submit')
   end
 end

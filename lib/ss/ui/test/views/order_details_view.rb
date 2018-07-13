@@ -15,7 +15,8 @@ class OrderDetailsView
     @destination_address = TextInput.new(:name, 'withdrawal')
     @refund_address      = TextInput.new(:name, 'refund')
     @deposit_min         = BaseElement.new(:xpath, '//label[text()="Deposit Min"]/..')
-    @deposit_max         = BaseElement.new(:xpath, '//span[@ng-show="formData.type == 2"]')
+    @deposit_max         = BaseElement.new(:xpath,
+                                           '//span[@ng-show="formData.type == 2"]')
     @miner_fee           = BaseElement.new(:xpath, '//span[@ng-show="quoteData"]')
   end
 end
