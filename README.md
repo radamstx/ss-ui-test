@@ -53,7 +53,8 @@ RSpec as the test runner and Bundler as being used to package the project.
 ### Watching Tests
 
 You may watch the tests from any vnc viewer by directing your vnc viewer to: `localhost:5900`,
-or if you had to override `VNC_PORT`, `localhost:VNC_PORT`
+or if you had to override `VNC_PORT`, `localhost:VNC_PORT`. The password you will need to enter is
+"secret".
 
 ## Installation
 
